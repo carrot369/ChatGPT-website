@@ -136,8 +136,8 @@ $(document).ready(function() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        //'Authorization': 'Bearer ' + data.apiKey
-        'Authorization': 'Bearer ' + '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' 
+        'Authorization': 'Bearer ' + data.apiKey
+//        'Authorization': 'Bearer ' + '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' 
       },
       data: JSON.stringify({
         "messages": data.prompt,
@@ -178,14 +178,14 @@ $(document).ready(function() {
   chatInput.on("keydown",handleEnter);
   
   // 禁用右键菜单
-  document.addEventListener('contextmenu',function(e){
-    e.preventDefault();  // 阻止默认事件
-  });
+//  document.addEventListener('contextmenu',function(e){
+ //   e.preventDefault();  // 阻止默认事件
+//  });
 
   // 禁止键盘F12键
-  document.addEventListener('keydown',function(e){
-    if(e.key == 'F12'){
-        e.preventDefault(); // 如果按下键F12,阻止事件
-    }
-  });
+ // document.addEventListener('keydown',function(e){
+  //  if(e.key == 'F12'){
+   //     e.preventDefault(); // 如果按下键F12,阻止事件
+//    }
+ // });
 });
