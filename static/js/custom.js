@@ -137,7 +137,7 @@ $(document).ready(function() {
       headers: {
         'Content-Type': 'application/json',
         //'Authorization': 'Bearer ' + data.apiKey
-        'Authorization': 'Bearer ' + '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' 
+        'Authorization': 'Bearer ' + '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' 
       },
       data: JSON.stringify({
         "messages": data.prompt,
