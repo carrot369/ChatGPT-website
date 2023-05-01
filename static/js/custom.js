@@ -88,23 +88,23 @@ $(document).ready(function() {
     
     // 保存api key与对话数据
     var data = {
-      "apiKey" : "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", // 这里填写固定 apiKey
+      "apiKey" : "", // 这里填写固定 apiKey
     }
    
     // 判断是否使用自己的api key
-//     if ($(".key .ipt-1").prop("checked")){
-//       var apiKey = $(".key .ipt-2").val();
-//       if (apiKey.length < 20 ){
-//           common_ops.alert("请输入正确的 api key ！",function(){
-//             chatInput.val('');
-//             // 重新绑定键盘事件
-//             chatInput.on("keydown",handleEnter);
-//           })
-//           return
-//       }else{
-//         data.apiKey = apiKey
-//       }
-//     }
+     if ($(".key .ipt-1").prop("checked")){
+       var apiKey = $(".key .ipt-2").val();
+       if (apiKey.length < 20 ){
+           common_ops.alert("请输入正确的 api key ！",function(){
+             chatInput.val('');
+             // 重新绑定键盘事件
+             chatInput.on("keydown",handleEnter);
+           })
+           return
+       }else{
+         data.apiKey = apiKey
+       }
+     }
 
     var message = chatInput.val();
     if (message.length == 0){
